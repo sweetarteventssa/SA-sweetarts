@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sweet Art Events</title>
+
+<style>
+/* ---- Slider with blurred background ---- */
+.slider {
+  position: relative;
+  width: 100%;
+  height: 600px; 
+  overflow: hidden;
+}
+
+.logo {
+  height:80px; 
+  width:auto; 
+}
+
+.slide-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.slide-wrapper.active {
+  opacity: 1;
+}
+
+.slide-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: blur(20px);
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.slide-img {
+  position: relative;
+  max-height: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+  z-index: 2;
+}
+
+/* ---- General Styles ---- */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background: #c8be38;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #ff4da6;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+.section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.section h2 {
+  color: #ff4da6;
+  margin-bottom: 30px;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.contact {
+  background: #ff4da6;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ---- Header with logo ---- -->
+<header>
+  <div style="display:flex; align-items:center;">
+    <img src="c:\Users\nizar\OneDrive\Bureau\site\pics\649194569_1552356259197997_1398702169753112953_n.jpg" alt="Logo" class="logo">
+    <h1 style="margin-left:10px;">Sweet Art Events</h1>
+  </div>
+  <nav>
+    <a href="#">Accueil</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Galerie</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- ---- Slider ---- -->
+<div class="slider">
+  <div class="slide-wrapper active">
+    <div class="slide-bg" style="background-image: url('https://i.imgur.com/KfwxkqY.jpg')"></div>
+    <img class="slide-img" src="https://i.imgur.com/KfwxkqY.jpg">
+  </div>
+
+  <div class="slide-wrapper">
+    <div class="slide-bg" style="background-image: url('https://i.imgur.com/PLZXdU9.jpg')"></div>
+    <img class="slide-img" src="https://i.imgur.com/PLZXdU9.jpg">
+  </div>
+
+  <div class="slide-wrapper">
+    <div class="slide-bg" style="background-image: url('https://i.imgur.com/MtiDqf5.jpg')"></div>
+    <img class="slide-img" src="https://i.imgur.com/MtiDqf5.jpg">
+  </div>
+
+  <div class="slide-wrapper">
+    <div class="slide-bg" style="background-image: url('https://i.imgur.com/sGaZGTs.jpg')"></div>
+    <img class="slide-img" src="https://i.imgur.com/sGaZGTs.jpg">
+  </div>
+</div>
+
+<!-- ---- Services Section ---- -->
+<section class="section" id="services">
+  <h2>Nos Services</h2>
+  <div class="services">
+    <div class="card">
+      <h3>Décoration Anniversaire</h3>
+      <p>Création de décors uniques pour les anniversaires enfants et adultes.</p>
+    </div>
+    <div class="card">
+      <h3>Photobooths</h3>
+      <p>Photobooths immersifs pour capturer des souvenirs magiques.</p>
+    </div>
+    <div class="card">
+      <h3>Professional Events</h3>
+      <p>Décoration spéciale pour cérémonies et fêtes professionelles.</p>
+    </div>
+    <div class="card">
+      <h3>Décors 3D</h3>
+      <p>Créations artistiques en 3D pour événements et installations visuelles.</p>
+    </div>
+  </div>
+<div class="services">
+  <div class="card">
+    <h3><a href="anniversaire.html">Décoration Anniversaire</a></h3>
+    <p>Création de décors uniques pour les anniversaires enfants et adultes.</p>
+  </div>
+
+  <div class="card">
+    <h3><a href="photobooths.html">Photobooths</a></h3>
+    <p>Photobooths immersifs pour capturer des souvenirs magiques.</p>
+  </div>
+
+  <div class="card">
+    <h3><a href="graduation.html">Graduation Events</a></h3>
+    <p>Décoration spéciale pour cérémonies et fêtes de graduation.</p>
+  </div>
+
+  <div class="card">
+    <h3><a href="3d.html">Décors 3D</a></h3>
+    <p>Créations artistiques en 3D pour événements et installations visuelles.</p>
+  </div>
+</div>
+</section>
+
+<!-- ---- Gallery Section ---- -->
+<section class="section" id="gallery">
+  <h2>Galerie</h2>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622">
+    <img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde">
+    <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3">
+    <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d">
+  </div>
+</section>
+
+<!-- ---- Contact Section ---- -->
+<section class="contact" id="contact">
+  <h2>Contact & Réservation</h2>
+  <p>Réservez votre décor ou votre photobooth dès maintenant.</p>
+  <p>📞 +216 52 912 112</p>
+  <p>📷 Instagram : @sweetart_events</p>
+</section>
+
+<!-- ---- Footer ---- -->
+<footer>
+  <p>© 2026 Sweet Art Events | Décoration & Photobooths</p>
+</footer>
+
+<!-- ---- Slider Script ---- -->
+<script>
+let slides = document.querySelectorAll(".slide-wrapper");
+let index = 0;
+
+setInterval(() => {
+  slides[index].classList.remove("active");
+  index++;
+  if(index >= slides.length) index = 0;
+  slides[index].classList.add("active");
+}, 4000);
+</script>
+
+</body>
+</html>
